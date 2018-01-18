@@ -1,0 +1,28 @@
+<link rel="stylesheet" type="text/css" href="./public/css/home.css">
+<script src="./public/js/home.js"></script>
+
+<div class="container">
+	<h1>Movie Poster Scrape</h1>
+	<h3 class="text-left">New Movie Posters</h3>
+	<br>
+	<a href="#" class="previous">&laquo; Previous</a>
+	<a href="#" class="next">Next &raquo;</a>
+	<div>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Title</th>
+					<th>Poster</th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each results}}
+					<tr>
+						<td>{{this.title}}</td>
+						<td><img class="poster" src="{{this.poster}}"></td>
+					</tr>
+				{{/each}}
+			</tbody>
+		</table>
+	</div>
+</div>
